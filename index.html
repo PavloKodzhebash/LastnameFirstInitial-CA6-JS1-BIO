@@ -11,23 +11,20 @@
 <p id="demo">Your game results will appear here!</p>
 
 <script>
-    // Step 1: Collect player name
-    let playerName = prompt("Welcome to Bear Ninja Hunter! Please enter your name:");
 
-    // Step 2: Greet the player
-    alert(`Hello ${playerName}! Get ready to play Bear Ninja Hunter!`);
+    let playerName = prompt("To continue, please enter your name:");
 
-    // Step 3: Ask for player's choice
+    alert(`Hello ${playerName}! Welcome to Bear Ninja Hunter!`);
+
     let playerChoice = prompt("Choose your character: Bear, Ninja, or Hunter");
 
-    // Step 4: Hard-coded computer choice
-    let computerChoice = "Bear";
-
-    // Step 5: Display results on page
-    document.getElementById("demo").innerHTML = `Player: ${playerName} chose ${playerChoice}. Computer chose ${computerChoice}.`;
-
-    // Step 6: Display results in console
+    const computerChoice = "Bear";
+    
+    document.getElementById("demo").innerHTML = 
+        `Player: ${playerName} chose ${playerChoice}. Computer chose ${computerChoice}.`;
+    
     console.log(`Player: ${playerName} chose ${playerChoice}. Computer chose ${computerChoice}.`);
+
 </script>
 
 </body>
