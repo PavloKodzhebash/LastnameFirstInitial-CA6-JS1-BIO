@@ -6,26 +6,37 @@
     <title>Bear Ninja Hunter</title>
 </head>
 <body>
+    <h1>Bear Ninja Hunter</h1>
+    <p id="demo">Replace this content with the game results</p>
 
-<h1>Bear Ninja Hunter</h1>
-<p id="demo">Your game results will appear here!</p>
+    <script>
+        // Ask for player's name
+        let playerName = prompt("Enter your name to play Bear Ninja Hunter:");
 
-<script>
+        // Greet the player with an alert
+        alert(`Welcome to Bear Ninja Hunter, ${playerName}!`);
 
-    let playerName = prompt("To continue, please enter your name:");
+        // Ask for player's choice
+        let playerChoice = prompt("Enter your choice: Bear, Ninja, or Hunter");
 
-    alert(`Hello ${playerName}! Welcome to Bear Ninja Hunter!`);
+        // Computer's choice (hard-coded to Bear)
+        let computerChoice = "Bear";
 
-    let playerChoice = prompt("Choose your character: Bear, Ninja, or Hunter");
+        // Create the game result message
+        let resultMessage = playerName + " chose " + playerChoice + ". Computer chose " + computerChoice + ".";
 
-    const computerChoice = "Bear";
-    
-    document.getElementById("demo").innerHTML = 
-        `Player: ${playerName} chose ${playerChoice}. Computer chose ${computerChoice}.`;
-    
-    console.log(`Player: ${playerName} chose ${playerChoice}. Computer chose ${computerChoice}.`);
+        // Display the result on the HTML page
+        document.getElementById("demo").innerHTML = resultMessage;
 
-</script>
+        // Display the result in the console
+        console.log(`${playerName} chose ${playerChoice}. Computer chose ${computerChoice}.`);
 
+        // Example of escape character for apostrophe
+        alert('Let\'s play Bear Ninja Hunter!');
+
+        // Additional console logs demonstrating concatenation
+        console.log("Result using + : " + playerName + " vs " + computerChoice);
+        console.log(`Result using template literals: ${playerName} vs ${computerChoice}`);
+    </script>
 </body>
 </html>
